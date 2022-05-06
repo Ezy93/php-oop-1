@@ -6,18 +6,18 @@ class Movie
         private $title;
         private $language;
         private $duration;
-        private $actors;
+        private $firstActor;
         private $director;
         private $nationality;
         
         
         
-        public function __construct($title, $language, $duration, $actors, $director, $nationality)
+        public function __construct($title, $language, $duration, $firstActor, $director, $nationality)
         {
             $this->title = $title;
             $this->language = $language;
             $this->duration = $duration;
-            $this->actors = $actors;
+            $this->firstActor = $firstActor;
             $this->director = $director;
             $this->nationality = $nationality;
         }
@@ -35,7 +35,7 @@ class Movie
         }
 
         public function getActors(){
-            return $this->actors;
+            return $this->firstActor;
         }
 
         public function getDirector(){
@@ -47,5 +47,8 @@ class Movie
         }
         
     }
+
+    $doctorStrange = new Movie('doctorStrange', 'italiano', 126, 'Benedict Cumberbatch', 'Sam Raimi', 'U.s.a.');
+    $guidaIntergalattica = new Movie('guida intergalattica per autostoppisti', 'italiano', 110, 'Martin Freeman', 'Hammer & Tongs', 'U.s.a.');
     
 ?>
