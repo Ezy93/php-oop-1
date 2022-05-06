@@ -36,7 +36,7 @@ class Movie
             return $this->duration;
         }
 
-        public function getActors(){
+        public function getActor(){
             return $this->firstActor;
         }
 
@@ -54,7 +54,74 @@ class Movie
         
     }
 
-    $doctorStrange = new Movie('doctorStrange', 'italiano', 126, 'Benedict Cumberbatch', 'Sam Raimi', 'U.s.a.', 'https://m.media-amazon.com/images/I/81Zlc0suPCL._SY550_.jpg');
+    $doctorStrange = new Movie('Doctor Strange', 'italiano', 126, 'Benedict Cumberbatch', 'Sam Raimi', 'U.s.a.', 'https://m.media-amazon.com/images/I/81Zlc0suPCL._SY550_.jpg');
     $guidaIntergalattica = new Movie('guida intergalattica per autostoppisti', 'italiano', 110, 'Martin Freeman', 'Hammer & Tongs', 'U.s.a.', 'https://pad.mymovies.it/filmclub/2005/07/045/locandina.jpg');
     
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Films</title>
+</head>
+<body>
+    <main>
+        <h1>Films:</h1>
+        <div class="container">
+            <div class="film-card">
+                <div>
+                    <img src="<?= $doctorStrange->getPoster() ?>" alt="<?= $doctorStrange->getTitle().'image' ?>">
+                </div>
+                <h3>
+                    <span class="text-bold">Titolo:</span><?=$doctorStrange->getTitle() ?>
+                </h3>
+                <p>
+                    <span class="text-bold">Language:</span><?= $doctorStrange->getLanguage()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Durata(min.):</span><?=$doctorStrange->getDuration()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Attore principale:</span><?=$doctorStrange->getActor()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Regista:</span><?=$doctorStrange->getDirector()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Nazione di produzione:</span><?=$doctorStrange->getNationality()  ?>
+                </p>
+            </div>
+    
+            <div class="film-card">
+                <div>
+                    <img src="<?= $guidaIntergalattica->getPoster() ?>" alt="<?= $guidaIntergalattica->getTitle().'image' ?>">
+                </div>
+                <h3>
+                    <span class="text-bold">Titolo:</span><?=$guidaIntergalattica->getTitle() ?>
+                </h3>
+                <p>
+                    <span class="text-bold">Language:</span><?= $guidaIntergalattica->getLanguage()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Durata(min.):</span><?=$guidaIntergalattica->getDuration()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Attore principale:</span><?=$guidaIntergalattica->getActor()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Regista:</span><?=$guidaIntergalattica->getDirector()  ?>
+                </p>
+                <p>
+                    <span class="text-bold">Nazione di produzione:</span><?=$guidaIntergalattica->getNationality()  ?>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
