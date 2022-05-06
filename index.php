@@ -9,10 +9,11 @@ class Movie
         private $firstActor;
         private $director;
         private $nationality;
+        private $poster;
         
         
         
-        public function __construct($title, $language, $duration, $firstActor, $director, $nationality)
+        public function __construct($title, $language, $duration, $firstActor, $director, $nationality, $poster)
         {
             $this->title = $title;
             $this->language = $language;
@@ -20,6 +21,7 @@ class Movie
             $this->firstActor = $firstActor;
             $this->director = $director;
             $this->nationality = $nationality;
+            $this->poster = $poster;
         }
 
         public function getTitle(){
@@ -45,10 +47,14 @@ class Movie
         public function getNationality(){
             return $this->nationality;
         }
+
+        public function getPoster(){
+            return $this->poster;
+        }
         
     }
 
-    $doctorStrange = new Movie('doctorStrange', 'italiano', 126, 'Benedict Cumberbatch', 'Sam Raimi', 'U.s.a.');
-    $guidaIntergalattica = new Movie('guida intergalattica per autostoppisti', 'italiano', 110, 'Martin Freeman', 'Hammer & Tongs', 'U.s.a.');
+    $doctorStrange = new Movie('doctorStrange', 'italiano', 126, 'Benedict Cumberbatch', 'Sam Raimi', 'U.s.a.', 'https://m.media-amazon.com/images/I/81Zlc0suPCL._SY550_.jpg');
+    $guidaIntergalattica = new Movie('guida intergalattica per autostoppisti', 'italiano', 110, 'Martin Freeman', 'Hammer & Tongs', 'U.s.a.', 'https://pad.mymovies.it/filmclub/2005/07/045/locandina.jpg');
     
 ?>
