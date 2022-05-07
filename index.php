@@ -53,6 +53,7 @@ class Movie
         }
         
     }
+    
     $films=[
         $doctorStrange = new Movie('Doctor Strange', 'italiano', 126, 'Benedict Cumberbatch', 'Sam Raimi', 'U.s.a.', 'https://m.media-amazon.com/images/I/81Zlc0suPCL._SY550_.jpg'),
         $guidaIntergalattica = new Movie('guida intergalattica per autostoppisti', 'italiano', 110, 'Martin Freeman', 'Hammer & Tongs', 'U.s.a.', 'https://pad.mymovies.it/filmclub/2005/07/045/locandina.jpg'),
