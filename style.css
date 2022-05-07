@@ -4,8 +4,8 @@
     padding: 0;
 }
 
-h1{
-    padding: 1rem;
+h3{
+    margin: 1rem 0;
 }
 
 div.container{
@@ -18,11 +18,13 @@ div.container{
 }
 
 .film-card{
-    width: 50%;
+    width: calc(100%/4 - 2rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    justify-content: center;
+    background-color: rgb(182, 178, 178);
+    margin: 1rem;
 }
 
 .img-container{
